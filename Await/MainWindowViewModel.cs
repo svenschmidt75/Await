@@ -118,6 +118,7 @@ namespace Await
                         temp.Write(buffer, 0, count);
                         currentStep += step;
                         ProgressBarValue = (int)currentStep;
+                        Task.Delay(100);
                     } while (count > 0);
                     temp.Seek(0, SeekOrigin.Begin);
                     html = new StreamReader(temp).ReadToEnd();
@@ -149,6 +150,7 @@ namespace Await
                         temp.Write(buffer, 0, count);
                         currentStep += step;
                         ProgressBarValue = (int)currentStep;
+                        await Task.Delay(100);
                     } while (count > 0);
                     temp.Seek(0, SeekOrigin.Begin);
                     html = new StreamReader(temp).ReadToEnd();
