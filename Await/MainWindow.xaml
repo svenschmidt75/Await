@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBox Text="{Binding Path=Url}" Height="23" Margin="8,14,155,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding AddWebSiteCommand}" Height="23" Margin="0,14,74,0" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Add Item" Width="76" />
+        <CheckBox IsChecked="{Binding AsyncChecked}" Content="Async" Margin="0,14,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="59" Height="23" />
+        <TextBox TextWrapping="Wrap" IsReadOnly="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" Text="{Binding Path=UrlLabel}" Margin="10,42,10,38" Name="ListView1" HorizontalAlignment="Stretch" Background="#FFE2C7C7"/>
+        <ProgressBar Maximum="100" Value="{Binding ProgressBarValue, UpdateSourceTrigger=PropertyChanged}" Margin="10,286,10,10" Foreground="Salmon" Height="25" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>
